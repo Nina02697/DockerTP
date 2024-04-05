@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: progdist
+  name: progdist
+spec:
+  ports:
+    - nodePort: 30945
+      port: 5000
+      protocol: TCP
+      targetPort: 5000
+  selector:
+    app: progdist
+  type: LoadBalancer
