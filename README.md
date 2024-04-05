@@ -1,2 +1,2 @@
-# ProgDist
+# Docker
 Programmation Distribuée
