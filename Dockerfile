@@ -1,14 +1,16 @@
 FROM python:3.9-slim
 
-# Définit le répertoire de travail dans le conteneur
-WORKDIR C:/Users/AIT FERHAT/Desktop/ProgDist
+# Set the working directory to /app
+WORKDIR /app
 
+# Copy the Flask application file into the container at /app
+COPY app.py .
 
-# Copie les fichiers de l'application Flask dans le conteneur
-COPY app.py /app
+# Install Flask
+RUN pip install flask
 
-# Expose le port 5000
+# Expose port 5000 for the application
 EXPOSE 5000
 
-# Commande pour démarrer l'application Flask
+# Command to start the Flask application
 CMD ["flask", "run", "--host=0.0.0.0"]
