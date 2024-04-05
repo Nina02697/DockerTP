@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: progdist
+  name: progradist
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: progdist
+      app: progradist
   template:
     metadata:
       labels:
-        app: progdist
+        app: progradist
     spec:
       containers:
         - image: nina6597/progdist:1
           imagePullPolicy: IfNotPresent
-          name: progdist
+          name: progradist
       restartPolicy: Always
