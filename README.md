@@ -1,2 +1,2 @@
 # Docker
-Programmation Distribuée
+TP Programmation Distribuée
