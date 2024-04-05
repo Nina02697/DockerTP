@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monappli
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monappli
+  template:
+    metadata:
+      labels:
+        app: monappli
+    spec:
+      containers:
+        - image: nina6597/monappli:1
+          imagePullPolicy: IfNotPresent
+          name: monappli
+      restartPolicy: Always
