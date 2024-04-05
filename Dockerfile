@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.9
 
 # Set the working directory to /app
 WORKDIR /app
@@ -13,4 +13,5 @@ RUN pip install flask
 EXPOSE 5000
 
 # Command to start the Flask application
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python","app.py"]
+
