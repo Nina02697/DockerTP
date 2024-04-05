@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: progdist
-  name: progdist
+    app: progradist
+  name: progradist
 spec:
   ports:
     - nodePort: 30945
@@ -11,5 +11,5 @@ spec:
       protocol: TCP
       targetPort: 5000
   selector:
-    app: progdist
+    app: progradist
   type: LoadBalancer
